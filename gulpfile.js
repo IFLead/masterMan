@@ -1,5 +1,5 @@
 "use strict";
- 
+
 var gulp = require("gulp");
 var sass = require("gulp-sass");     // Преобразовует sass в css
 var plumber = require("gulp-plumber");  // При ошибке не отсанавливает работу сервера
@@ -10,7 +10,7 @@ var autoprefixer = require("autoprefixer");   // Проставляет преф
 var minify = require("gulp-csso");					// Минификацирует css
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");				// Преобразовывает изображения в формат webp
-var svgstore = require("gulp-svgstore");		// формирует спрайт 
+var svgstore = require("gulp-svgstore");		// формирует спрайт
 var rename = require("gulp-rename");			// Переименовывает файлы
 var del = require("del");
 var run = require("run-sequence");		// Запускает таски последовательно ( для сборки)
@@ -18,9 +18,9 @@ var server = require("browser-sync").create();		// Сервер
 var uglify = require("gulp-uglify");		// минимизация js
 var pump = require("pump");				// для js
 var concat = require("gulp-concat");		//объединяет js файлы
- 
 
-gulp.task("style", function() {						
+
+gulp.task("style", function() {
 	gulp.src("sass/style.sass")
 		.pipe(plumber())
 		.pipe(sass())
@@ -53,7 +53,7 @@ gulp.task("html", function() {
 	.pipe(server.stream());
 });
 
-gulp.task("images", function() {								
+gulp.task("images", function() {
 	return gulp.src("img/**/*.+(png|jpg|svg)")
 		.pipe(imagemin([
 			imagemin.optipng({optimizationLevel: 3}),

@@ -1,270 +1,334 @@
 @import "libs.sass"
 @import "variables.sass"
 
+@font-face
+  font-family: "ProximaNova"
+  src: url("../fonts/ProximaNova-Bold.eot")
+  src: url("../fonts/ProximaNova-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg") format("svg")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+
+@font-face
+  font-family: "ProximaNova"
+  src: url("../fonts/ProximaNova-Regular.eot")
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg") format("svg")
+  font-weight: 400
+  font-style: normal
+  font-display: swap
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden 
-	position: absolute
+input[type="radio"].visually-hidden
+  position: absolute
 
-	width: 1px
-	height: 1px
-	margin: -1px
-	border: 0
-	padding: 0
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
 
-	white-space: nowrap
+  white-space: nowrap
 
-	clip-path: inset(100%)
-	clip: rect(0 0 0 0)
-	overflow: hidden
-
-
-img 
-	max-width: 100%
-	height: auto
-
-*, *::before, *::after 
-	box-sizing: inherit
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
 
 
+img
+  max-width: 100%
+  height: auto
 
-html 
-	box-sizing: border-box;
+*, *::before, *::after
+  box-sizing: inherit
+
+
+
+html
+  box-sizing: border-box;
 
 body
-	font-size: 16px
-	line-height: 20px
-	color: #ffffff
+  font-family: "ProximaNova", "Arial", sans-serif
+  font-size: 16px
+  line-height: 20px
+  font-weight: 400
+  color: #ffffff
+  margin: 0
+
+.container
+  width: 1200px
+  margin:
+    left: auto
+    right: auto
 
 
 .main-header
-	&__list
-		padding: 
-			left: 0
-		list-style: none
-		display: flex
-	&__element
-		margin: 
-			right: 75px
-		a
-			text-decoration: none
-			&:hover, &:focus
-				color: $orange
+  display: flex
+  margin:
+    left: 55px
+    bottom: 175px
+  &__logo
+    margin:
+      right: 85px
+  &__list
+    padding:
+      left: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    margin:
+      top: 0
+      bottom: 0
+  &__element
+    margin:
+      right: 75px
+    a
+      color: #ffffff
+      transition: color 0.2s ease
+      text-decoration: none
+      &:hover, &:focus
+        text-decoration: none
+        color: $orange
 
 .main-screen
-	background-color: #000000
-	padding: 
-		top: 23px
-		bottom: 51px
-	&__title
-		font-size: 107px
-		line-height: 130px
-		color: #ffffff
-		font-weight: 700
-		margin: 
-			bottom: 37px
-		span
-			color: $orange
-	&__description
-		line-height: 30px
-	.actions
-		margin: 
-			top: 95px
-		&__button
-			border-radius: 32px
-			&--service
-				background-color: $orange
-			&--request
-				background-color: #ffffff
-				color: $orange
-	.contacts
-		display: flex
-		padding: 
-			left: 0
-		list-style: none;
+  background-color: #000000
+  padding:
+    top: 23px
+    bottom: 51px
+  &__title
+    font-size: 107px
+    line-height: 130px
+    color: #ffffff
+    font-weight: 700
+    text-transform: uppercase
+    width: 700px
+    display: block
+    text-align: center
+    margin:
+      left: auto
+      right: auto
+    margin:
+      bottom: 35px
+    span
+      color: $orange
+  &__description
+    line-height: 30px
+    text-align: center
+    width: 810px
+    margin:
+      left: auto
+      right: auto
+      bottom: 30px
+  .actions
+    margin:
+      top: 95px
+    &__button
+      font-family: "ProximaNova", "Arial", sans-serif
+      border-radius: 32px
+      font-size: 16px
+      line-height: 20px
+      border: 0px
+      padding:
+        left: 64px
+        bottom: 64px
+        top: 16px
+        bottom: 15px
+      &--service
+        background-color: $orange
+        color: #ffffff
+        margin:
+          right: 80px
+      &--request
+        background-color: #ffffff
+        color: $orange
+  .contacts
+    display: flex
+    padding:
+      left: 0
+    list-style: none;
 
 .services
-	padding: 
-		top: 100px
-	&__title
-		font-size: 20px
-		color: $orange
-		line-height: 24px
-		font-weight: 700
-	&__subtitle
-		font-size: 14px
-		color: #000000
-		line-height: 17px
-		font-weight: 700
-		margin: 
-			bottom: 100px		
-		&__list
-			display: grid
+  padding:
+    top: 100px
+  &__title
+    font-size: 20px
+    color: $orange
+    line-height: 24px
+    font-weight: 700
+  &__subtitle
+    font-size: 14px
+    color: #000000
+    line-height: 17px
+    font-weight: 700
+    margin:
+      bottom: 100px
+    &__list
+      display: grid
 
 .advantages
-	background-color: #000000
-	padding: 
-		top: 100px
-		bottom: 100px	
-	&__title
-		font-size: 20px
-		line-height: 24px
-		font-weight: 700
-	&__subtitle
-		color: $orange
-	&__list
-		display: flex
-		padding: 
-			left: 0
-		list-style: none
-	&__element
-		padding: 
-			top: 105px
-			bottom: 100px
-		border-radius: 15px
-		background-color: rgba(255, 255, 255, 0.15)
-	&__element-title
-		font-size: 17px
-		font-weight: 700
-		line-height: 21px
-		margin: 
-			bottom: 25px
-	&__element-description
-		width: 264px
+  background-color: #000000
+  padding:
+    top: 100px
+    bottom: 100px
+  &__title
+    font-size: 20px
+    line-height: 24px
+    font-weight: 700
+  &__subtitle
+    color: $orange
+  &__list
+    display: flex
+    padding:
+      left: 0
+    list-style: none
+  &__element
+    padding:
+      top: 105px
+      bottom: 100px
+    border-radius: 15px
+    background-color: rgba(255, 255, 255, 0.15)
+  &__element-title
+    font-size: 17px
+    font-weight: 700
+    line-height: 21px
+    margin:
+      bottom: 25px
+  &__element-description
+    width: 264px
 
 
 .bonus
-	padding: 
-		top: 100px
-		bottom: 100px	
-	&__title
-		font-size: 20px
-		line-height: 24px
-		color: #000000
-	&__subtitle
-		font-size: 14px
-		line-height: 17px
-		font-weight: 700
-	&__description
-		color: #000000
-		line-height: 30px
-		span
-			color: $orange
+  padding:
+    top: 100px
+    bottom: 100px
+  &__title
+    font-size: 20px
+    line-height: 24px
+    color: #000000
+  &__subtitle
+    font-size: 14px
+    line-height: 17px
+    font-weight: 700
+  &__description
+    color: #000000
+    line-height: 30px
+    span
+      color: $orange
 
 .request
-	background-color: $grey
-	padding: 
-		top: 100px
-		bottom: 100px	
-	&__title
-		font-size: 20px
-		line-height: 30px
-		font-weight: 700
-	&__subtitle
-		font-size: 14px
-		line-height: 30px
-		color: $orange
-		margin: 
-			bottom: 100px
-	&__description
-		line-height: 30px
-		margin: 
-			bottom: 20px
-	.form
-		display: grid
-		input, textarea
-			background-color: #000000
-			color: #ffffff
-			border-radius: 32px
-		&:placeholder
-			color: #ffffff
-			font-size: 16px
-			line-height: 30px
-		&__button
-			border-radius: 32px
-			background-color: $orange
+  background-color: $grey
+  padding:
+    top: 100px
+    bottom: 100px
+  &__title
+    font-size: 20px
+    line-height: 30px
+    font-weight: 700
+  &__subtitle
+    font-size: 14px
+    line-height: 30px
+    color: $orange
+    margin:
+      bottom: 100px
+  &__description
+    line-height: 30px
+    margin:
+      bottom: 20px
+  .form
+    display: grid
+    input, textarea
+      background-color: #000000
+      color: #ffffff
+      border-radius: 32px
+    &:placeholder
+      color: #ffffff
+      font-size: 16px
+      line-height: 30px
+    &__button
+      border-radius: 32px
+      background-color: $orange
 
 .reviews
-	padding: 
-		top: 100px
-	&__title
-		font-size: 20px
-		line-height: 30px
-		font-weight: 700
-	&__subtitle
-		font-size: 14px
-		line-height: 30px
-		color: $orange
-	&__element
-		background-color: #000000
-		&-name
-			font-size: 17px
-			line-height: 30px
-			font-weight: 700
-		&-date
-			font-size: 17px
-			line-height: 25px
-		&-content
-			line-height: 25px
+  padding:
+    top: 100px
+  &__title
+    font-size: 20px
+    line-height: 30px
+    font-weight: 700
+  &__subtitle
+    font-size: 14px
+    line-height: 30px
+    color: $orange
+  &__element
+    background-color: #000000
+    &-name
+      font-size: 17px
+      line-height: 30px
+      font-weight: 700
+    &-date
+      font-size: 17px
+      line-height: 25px
+    &-content
+      line-height: 25px
 
 .main-footer
-	background-color: #000000
-	padding: 
-		bottom: 33px
-	.navigation
-		background-color: #ffffff
-		padding: 
-			bottom: 30px
-		margin: 
-			bottom: 100px
-		&__list	
-			padding: 
-				left: 0
-			list-style: none
-			display: flex
-		&__element
-			a
-				color: #000000
-				&:hover, &:focus
-					color: $orange
-	&__sevices-title
-		font-size: 17px
-		font-weight: 700	
-		line-height: 21px
-		margin: 
-			bottom: 50px
-	&__sevices-list
-		display: flex
-		padding: 
-			left: 0
-		list-style: none	
-	&__sevices-element
-		margin: 
-			bottom: 25px
-		a
-			color: #ffffff
-			&:hover, &:focus
-				color: $orange
-				text-decoration: none
-	&__contacts
-		font-size: 17px
-		font-weight: 700	
-		line-height: 21px
-		margin: 
-			bottom: 50px
-	&__contacts-list
-		display: flex
-		padding: 
-			left: 0
-		list-style: none
-	&__contacts-element
-		a
-			color: #ffffff
-			&:hover, &:focus
-				color: $orange
-				text-decoration: none
-	&__copyright
-		margin: 
-			top: 72px	
+  background-color: #000000
+  padding:
+    bottom: 33px
+  .navigation
+    background-color: #ffffff
+    padding:
+      bottom: 30px
+    margin:
+      bottom: 100px
+    &__list
+      padding:
+        left: 0
+      list-style: none
+      display: flex
+    &__element
+      a
+        color: #000000
+        &:hover, &:focus
+          color: $orange
+  &__sevices-title
+    font-size: 17px
+    font-weight: 700
+    line-height: 21px
+    margin:
+      bottom: 50px
+  &__sevices-list
+    display: flex
+    padding:
+      left: 0
+    list-style: none
+  &__sevices-element
+    margin:
+      bottom: 25px
+    a
+      color: #ffffff
+      &:hover, &:focus
+        color: $orange
+        text-decoration: none
+  &__contacts
+    font-size: 17px
+    font-weight: 700
+    line-height: 21px
+    margin:
+      bottom: 50px
+  &__contacts-list
+    display: flex
+    padding:
+      left: 0
+    list-style: none
+  &__contacts-element
+    a
+      color: #ffffff
+      &:hover, &:focus
+        color: $orange
+        text-decoration: none
+  &__copyright
+    margin:
+      top: 72px
 
