@@ -32,3 +32,239 @@ img
 html 
 	box-sizing: border-box;
 
+body
+	font-size: 16px
+	line-height: 20px
+	color: #ffffff
+
+
+.main-header
+	&__list
+		padding: 
+			left: 0
+		list-style: none
+		display: flex
+	&__element
+		margin: 
+			right: 75px
+		a
+			text-decoration: none
+			&:hover, &:focus
+				color: $orange
+
+.main-screen
+	background-color: #000000
+	padding: 
+		top: 23px
+		bottom: 51px
+	&__title
+		font-size: 107px
+		line-height: 130px
+		color: #ffffff
+		font-weight: 700
+		margin: 
+			bottom: 37px
+		span
+			color: $orange
+	&__description
+		line-height: 30px
+	.actions
+		margin: 
+			top: 95px
+		&__button
+			border-radius: 32px
+			&--service
+				background-color: $orange
+			&--request
+				background-color: #ffffff
+				color: $orange
+	.contacts
+		display: flex
+		padding: 
+			left: 0
+		list-style: none;
+
+.services
+	padding: 
+		top: 100px
+	&__title
+		font-size: 20px
+		color: $orange
+		line-height: 24px
+		font-weight: 700
+	&__subtitle
+		font-size: 14px
+		color: #000000
+		line-height: 17px
+		font-weight: 700
+		margin: 
+			bottom: 100px		
+		&__list
+			display: grid
+
+.advantages
+	background-color: #000000
+	padding: 
+		top: 100px
+		bottom: 100px	
+	&__title
+		font-size: 20px
+		line-height: 24px
+		font-weight: 700
+	&__subtitle
+		color: $orange
+	&__list
+		display: flex
+		padding: 
+			left: 0
+		list-style: none
+	&__element
+		padding: 
+			top: 105px
+			bottom: 100px
+		border-radius: 15px
+		background-color: rgba(255, 255, 255, 0.15)
+	&__element-title
+		font-size: 17px
+		font-weight: 700
+		line-height: 21px
+		margin: 
+			bottom: 25px
+	&__element-description
+		width: 264px
+
+
+.bonus
+	padding: 
+		top: 100px
+		bottom: 100px	
+	&__title
+		font-size: 20px
+		line-height: 24px
+		color: #000000
+	&__subtitle
+		font-size: 14px
+		line-height: 17px
+		font-weight: 700
+	&__description
+		color: #000000
+		line-height: 30px
+		span
+			color: $orange
+
+.request
+	background-color: $grey
+	padding: 
+		top: 100px
+		bottom: 100px	
+	&__title
+		font-size: 20px
+		line-height: 30px
+		font-weight: 700
+	&__subtitle
+		font-size: 14px
+		line-height: 30px
+		color: $orange
+		margin: 
+			bottom: 100px
+	&__description
+		line-height: 30px
+		margin: 
+			bottom: 20px
+	.form
+		display: grid
+		input, textarea
+			background-color: #000000
+			color: #ffffff
+			border-radius: 32px
+		&:placeholder
+			color: #ffffff
+			font-size: 16px
+			line-height: 30px
+		&__button
+			border-radius: 32px
+			background-color: $orange
+
+.reviews
+	padding: 
+		top: 100px
+	&__title
+		font-size: 20px
+		line-height: 30px
+		font-weight: 700
+	&__subtitle
+		font-size: 14px
+		line-height: 30px
+		color: $orange
+	&__element
+		background-color: #000000
+		&-name
+			font-size: 17px
+			line-height: 30px
+			font-weight: 700
+		&-date
+			font-size: 17px
+			line-height: 25px
+		&-content
+			line-height: 25px
+
+.main-footer
+	background-color: #000000
+	padding: 
+		bottom: 33px
+	.navigation
+		background-color: #ffffff
+		padding: 
+			bottom: 30px
+		margin: 
+			bottom: 100px
+		&__list	
+			padding: 
+				left: 0
+			list-style: none
+			display: flex
+		&__element
+			a
+				color: #000000
+				&:hover, &:focus
+					color: $orange
+	&__sevices-title
+		font-size: 17px
+		font-weight: 700	
+		line-height: 21px
+		margin: 
+			bottom: 50px
+	&__sevices-list
+		display: flex
+		padding: 
+			left: 0
+		list-style: none	
+	&__sevices-element
+		margin: 
+			bottom: 25px
+		a
+			color: #ffffff
+			&:hover, &:focus
+				color: $orange
+				text-decoration: none
+	&__contacts
+		font-size: 17px
+		font-weight: 700	
+		line-height: 21px
+		margin: 
+			bottom: 50px
+	&__contacts-list
+		display: flex
+		padding: 
+			left: 0
+		list-style: none
+	&__contacts-element
+		a
+			color: #ffffff
+			&:hover, &:focus
+				color: $orange
+				text-decoration: none
+	&__copyright
+		margin: 
+			top: 72px	
+
