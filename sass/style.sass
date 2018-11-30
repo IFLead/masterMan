@@ -66,7 +66,7 @@ body
 .main-header
   display: flex
   margin:
-    left: 55px
+    left: 50px
     bottom: 175px
   &__logo
     margin:
@@ -82,7 +82,7 @@ body
       bottom: 0
   &__element
     margin:
-      right: 75px
+      right: 76px
     a
       color: #ffffff
       transition: color 0.2s ease
@@ -92,10 +92,27 @@ body
         color: $orange
 
 .main-screen
+  position: relative
   background-color: #000000
+  background-image: url("../img/mainScreen.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center -150px
   padding:
     top: 23px
     bottom: 51px
+  &::after
+    content: ""
+    position: absolute
+    z-index: 10
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.8)
+  .container
+    position: relative
+    z-index: 20
   &__title
     font-size: 107px
     line-height: 130px
@@ -122,7 +139,10 @@ body
       bottom: 30px
   .actions
     margin:
-      top: 95px
+      top: 90px
+      bottom: 182px
+    display: flex
+    justify-content: center
     &__button
       font-family: "ProximaNova", "Arial", sans-serif
       border-radius: 32px
@@ -131,9 +151,11 @@ body
       border: 0px
       padding:
         left: 64px
-        bottom: 64px
+        right: 64px
         top: 16px
         bottom: 15px
+      max-width: 300px
+      cursor: pointer
       &--service
         background-color: $orange
         color: #ffffff
@@ -146,16 +168,60 @@ body
     display: flex
     padding:
       left: 0
-    list-style: none;
+    list-style: none
+    margin:
+      top: 0
+      bottom: 0
+    justify-content: center
+    &__element
+      margin:
+        right: 137px
+      padding:
+        left: 35px
+      background-repeat: no-repeat
+      &--phone
+        background-image: url("../img/svg/phone.svg")
+        background-position: 9px center
+        background-size: auto 20px
+      &--email
+        background-image: url("../img/svg/email.svg")
+        background-position: 3px center
+        background-size: auto 20px
+      &--address
+        background-image: url("../img/svg/map.svg")
+        background-position: 8px center
+        background-size: auto 20px
 
 .services
   padding:
     top: 100px
+    bottom: 100px
   &__title
+    position: relative
     font-size: 20px
     color: $orange
     line-height: 24px
     font-weight: 700
+    text-transform: uppercase
+    width: 200px
+    text-align: center
+    margin:
+      top: 0
+      left: auto
+      right: auto
+      bottom: 15px
+    &::before
+      content: ""
+      position: absolute
+      width: 38px
+      height: 2px
+      background-color: $orange
+      left: 0
+      right: 0
+      bottom: -7px
+      margin:
+        left: auto
+        right: auto
   &__subtitle
     font-size: 14px
     color: #000000
@@ -163,56 +229,258 @@ body
     font-weight: 700
     margin:
       bottom: 100px
-    &__list
-      display: grid
+      top: 0
+      left: auto
+      right: auto
+    width: 275px
+  &__list
+    padding:
+      left: 0
+    margin:
+      top: 0
+      bottom: 0
+    list-style: none
+    display: grid
+    grid-template-columns: 323px 323px 323px
+    grid-column-gap: 90px
+    grid-row-gap: 80px
+    width: 1150px
+    margin:
+      left: auto
+      right: auto
+  &__element
+    position: relative
+    border-radius: 22px
+    background-color: $grey
+    background-size: cover
+    background-repeat: no-repeat
+    &::before
+      border-radius: 22px
+      content: ""
+      position: absolute
+      z-index: 10
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: rgba(0, 0, 0, 0.7)
+    a
+      position: relative
+      z-index: 20
+      display: flex
+      justify-content: center
+      align-items: center
+      text-decoration: none
+      border-radius: 22px
+      min-height: 202px
+      padding:
+        left: 30px
+        right: 30px
+      transition: all 0.2s ease
+    &--plumber
+      background-image: url("../img/service1.jpg")
+      background-position: center -105px
+    &--electric-installation
+      background-image: url("../img/service2.jpg")
+      background-position: center -95px
+    &--roofing
+      background-image: url("../img/service3.jpg")
+      background-position: center -10px
+    &--finishing-work
+      background-image: url("../img/service4.jpg")
+      background-position: center -20px
+    &--carpenter
+      background-image: url("../img/service5.jpg")
+      background-position: center -10px
+    &--metal-construction
+      background-image: url("../img/service6.jpg")
+      background-position: center 0
+    &--appliances
+      background-image: url("../img/service7.jpg")
+      background-position: center -10px
+      .services__element-title
+        width: 170px
+    &--furniture
+      background-image: url("../img/service8.jpg")
+      background-position: center -160px
+      .services__element-title
+        width: 180px
+    &--other
+      background-image: url("../img/service9.jpg")
+      background-position: center 0
+  &__element-title
+    color: #ffffff
+    font-size: 20px
+    line-height: 24px
+    text-align: center
+    margin:
+      top: 0
+      bottom: 0
+      left: auto
+      right: auto
 
 .advantages
+  position: relative
   background-color: #000000
   padding:
     top: 100px
     bottom: 100px
+  background-image: url("../img/advanteges.jpg")
+  background-repeat: no-repeat
+  background-position: 0 -500px
+  background-size: cover
+  &::after
+    content: ""
+    position: absolute
+    z-index: 10
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.8)
+  .container
+    position: relative
+    z-index: 20
   &__title
+    position: relative
     font-size: 20px
+    color: #ffffff
     line-height: 24px
     font-weight: 700
+    text-transform: uppercase
+    width: 200px
+    text-align: center
+    margin:
+      top: 0
+      left: auto
+      right: auto
+      bottom: 15px
+    &::before
+      content: ""
+      position: absolute
+      width: 38px
+      height: 2px
+      background-color: $orange
+      left: 0
+      right: 0
+      bottom: -7px
+      margin:
+        left: auto
+        right: auto
   &__subtitle
     color: $orange
+    font-size: 14px
+    line-height: 17px
+    width: 290px
+    margin:
+      left: auto
+      right: auto
+      bottom: 100px
   &__list
-    display: flex
+    display: grid
+    grid-template-columns: 334px 334px 334px
+    grid-gap: 60px
     padding:
       left: 0
     list-style: none
+    width: 1122px
+    margin:
+      left: auto
+      right: auto
+      bottom: 0
   &__element
     padding:
       top: 105px
-      bottom: 100px
+      bottom: 43px
     border-radius: 15px
     background-color: rgba(255, 255, 255, 0.15)
+    background-repeat: no-repeat
+    background-size: 47px 47px
+    &--fast
+      background-image: url(../img/svg/time.svg)
+      background-position: center 25px
+    &--neatly
+      background-image: url(../img/svg/certificate.svg)
+      background-position: center 25px
+    &--cheap
+      background-image: url(../img/svg/price.svg)
+      background-position: center 25px
   &__element-title
     font-size: 17px
     font-weight: 700
     line-height: 21px
+    text-transform: uppercase
+    text-align: center
+    width: 200px
     margin:
+      top: 0
       bottom: 25px
+      left: auto
+      right: auto
   &__element-description
     width: 264px
+    margin:
+      left: auto
+      right: auto
+      bottom: 0
+    text-align: center
 
 
 .bonus
   padding:
     top: 100px
-    bottom: 100px
+  background-image: url("../img/svg/procent.jpg")
+  background-repeat: round
+  .container
+    background-image: url("../img/svg/discount.svg")
+    background-repeat: no-repeat
+    background-size: 500px auto
+    background-position: 40px -55px
+    padding:
+      bottom: 150px
   &__title
+    position: relative
     font-size: 20px
-    line-height: 24px
     color: #000000
+    line-height: 24px
+    font-weight: 700
+    text-transform: uppercase
+    width: 200px
+    text-align: center
+    margin:
+      top: 0
+      left: auto
+      right: auto
+      bottom: 15px
+    &::before
+      content: ""
+      position: absolute
+      width: 27px
+      height: 2px
+      background-color: $orange
+      left: 0
+      right: 0
+      bottom: -7px
+      margin:
+        left: auto
+        right: auto
   &__subtitle
+    color: $orange
     font-size: 14px
     line-height: 17px
     font-weight: 700
+    width: 180px
+    margin:
+      left: auto
+      right: auto
+      bottom: 95px
   &__description
     color: #000000
     line-height: 30px
+    width: 455px
+    margin:
+      bottom: 20px
+      left: 575px
     span
       color: $orange
 
