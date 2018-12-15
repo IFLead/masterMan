@@ -485,118 +485,446 @@ body
       color: $orange
 
 .request
+  position: relative
   background-color: $grey
   padding:
     top: 100px
-    bottom: 100px
+    bottom: 98px
+  background-image: url("../img/request.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 0 -860px
+  &::after
+    content: ""
+    position: absolute
+    z-index: 10
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background-color: rgba(0, 0, 0, 0.8)
+  .container
+    position: relative
+    z-index: 20
   &__title
+    position: relative
     font-size: 20px
     line-height: 30px
     font-weight: 700
-  &__subtitle
-    font-size: 14px
-    line-height: 30px
-    color: $orange
+    text-transform: uppercase
+    width: 200px
+    text-align: center
     margin:
+      top: 0
+      left: auto
+      right: auto
+      bottom: 10px
+    &::before
+      content: ""
+      position: absolute
+      width: 37px
+      height: 2px
+      background-color: $orange
+      left: 0
+      right: 0
+      bottom: -5px
+      margin:
+        left: auto
+        right: auto
+  &__subtitle
+    color: $orange
+    font-size: 14px
+    line-height: 17px
+    font-weight: 700
+    width: 370px
+    text-align: center
+    margin:
+      left: auto
+      right: auto
       bottom: 100px
+      top: 0
   &__description
-    line-height: 30px
+    line-height: 17px
+    font-size: 14px
+    width: 495px
     margin:
       bottom: 20px
+      left: auto
+      right: auto
   .form
-    display: grid
-    input, textarea
+    width: 572px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin:
+      left: auto
+      right: auto
+    &-container
+      width: 100%
+      display: grid
+      grid-template-columns: 260px 260px
+      justify-content: space-between
+      grid-row-gap: 30px
+    input, textarea, select
+      font-family: inherit
       background-color: #000000
       color: #ffffff
       border-radius: 32px
-    &:placeholder
+      border: 0px
+      font-size: 16px
+      line-height: 20px
+      padding:
+        left: 31px
+        top: 16px
+        bottom: 15px
+        right: 20px
+    input::placeholder, textarea::placeholder, select::placeholder
       color: #ffffff
       font-size: 16px
       line-height: 30px
+    &__email
+      grid-column: 1/-1
+    &__textarea
+      grid-column: 1/-1
+      padding:
+        top: 18px
+      min-height: 114px
     &__button
       border-radius: 32px
       background-color: $orange
+      width: 260px
+      text-align: center
+      line-height: 20px
+      border: 0px
+      font-size: 16px
+      color: #ffffff
+      font-family: inherit
+      cursor: pointer
+      padding:
+        top: 15px
+        bottom: 15px
+        left: 20px
+        right: 20px
+      margin:
+        top: 30px
+        left: auto
+        right: auto
+        bottom: 0
 
 .reviews
+
   padding:
-    top: 100px
+    top: 96px
   &__title
+    position: relative
     font-size: 20px
     line-height: 30px
     font-weight: 700
+    color: #000000
+    text-transform: uppercase
+    width: 200px
+    text-align: center
+    margin:
+      top: 0
+      left: auto
+      right: auto
+      bottom: 15px
+    &::before
+      content: ""
+      position: absolute
+      width: 37px
+      height: 2px
+      background-color: $orange
+      left: 0
+      right: 0
+      bottom: -5px
+      margin:
+        left: auto
+        right: auto
   &__subtitle
-    font-size: 14px
-    line-height: 30px
     color: $orange
+    font-size: 14px
+    line-height: 17px
+    font-weight: 700
+    text-align: center
+    width: 370px
+    margin:
+      left: auto
+      right: auto
+      bottom: 65px
+      top: 0
+  &__list
+    position: relative
+    width: 988px
+    padding:
+      left: 0
+    list-style: none
+    .owl-stage
+      display: flex
+    .owl-stage-outer
+      width: 100%
+      padding:
+        top: 33px
+    .owl-nav
+      .owl-prev, .owl-next
+        width: 1px
+        height: 1px
+        margin: -1px
+        border: 0
+        padding: 0
+        &::before
+          content: ""
+          position: absolute
+          width: 21px
+          height: 36px
+          background-image: url("../img/svg/arrow.svg")
+          background-repeat: no-repeat
+          cursor: pointer
+          top: 0
+          bottom: 0
+          margin:
+            top: auto
+            bottom: auto
+      .owl-prev
+        &::before
+          left: -81px
+          transform: rotate(-180deg)
+      .owl-next
+        &::before
+          right: -81px
+    li:nth-child(2n)
+      margin:
+        right: 0
   &__element
+    position: relative
     background-color: #000000
+    background-repeat: no-repeat
+    background-size: cover
+    width: 454px
+    height: 100%
+    background-image: url("../img/reviews.jpg")
+    background-position: 0 -250px
+    padding:
+      left: 30px
+      bottom: 30px
+      right: 32px
+      top: 60px
+    &-wrapper
+      position: relative
+      z-index: 20
+      display: flex
+      flex-direction: column
+      height: 100%
+    &::before
+      content: ""
+      position: absolute
+      z-index: 30
+      width: 67px
+      height: 67px
+      background-color: $orange
+      border-radius: 50%
+      top: -33px
+      left: 0
+      right: 0
+      margin:
+        left: auto
+        right: auto
+    &::after
+      content: ""
+      position: absolute
+      z-index: 10
+      background-color: rgba(0, 0, 0, 0.8)
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+    &-information
+      display: flex
+      justify-content: space-between
+      margin:
+        bottom: 30px
     &-name
       font-size: 17px
-      line-height: 30px
+      line-height: 21px
       font-weight: 700
+      margin:
+        top: 0
+        bottom: 0
     &-date
       font-size: 17px
-      line-height: 25px
+      line-height: 21px
+      margin:
+        top: 0
+        bottom: 0
     &-content
       line-height: 25px
+      margin:
+        bottom: 30px
+        top: 0
+  &__stars
+    display: flex
+    list-style: none
+    margin:
+      top: auto
+      left: auto
+      right: auto
+    padding:
+      left: 0
+    li:nth-child(2n)
+        margin-right: 10px
+    li:last-child
+      margin-right: 0
+    .star
+      width: 21px
+      height: 20px
+      margin:
+        right: 10px
+
+      &--full
+        background-image: url("../img/svg/star.svg")
+        background-size: cover
+
+
+.bottom-navigation
+  margin:
+    top: 95px
+  &__list
+    padding:
+      left: 0
+    margin:
+      left: 190px
+      bottom: 30px
+    list-style: none
+    display: flex
+  li:last-child
+    margin:
+      right: 0
+  &__element
+    margin:
+      right: 82px
+
+    a
+      font-size: 17px
+      line-height: 21px
+      text-decoration: none
+      color: #000000
+      transition: color 0.2s ease
+      &:hover, &:focus
+        color: $orange
+        text-decoration: none
 
 .main-footer
   background-color: #000000
   padding:
+    top: 100px
     bottom: 33px
-  .navigation
-    background-color: #ffffff
+  @media (max-width: 1600px)
     padding:
-      bottom: 30px
+      top: 50px
+  .container
+    display: flex
+    flex-wrap: wrap
+    width: 1500px
+    @media (max-width: 1600px)
+      width: 1200px
+      justify-content: space-around
+  &__logo-wrapper
+    display: flex
+    justify-content: center
+    align-items: flex-start
     margin:
-      bottom: 100px
-    &__list
-      padding:
-        left: 0
-      list-style: none
-      display: flex
-    &__element
-      a
-        color: #000000
-        &:hover, &:focus
-          color: $orange
+      top: 94px
+      right: 109px
+    @media (max-width: 1600px)
+      width: 100%
+      margin:
+        top: 60px
+        bottom: 30px
+        right: 0
+  &__logo
+    margin:
+      left: auto
+      right: auto
+
+  &__sevices
+    width: 530px
+    margin:
+      right: 76px
   &__sevices-title
     font-size: 17px
+    text-transform: uppercase
     font-weight: 700
     line-height: 21px
+    text-align: center
+    width: 200px
     margin:
+      top: 0
       bottom: 50px
+      left: auto
+      right: auto
   &__sevices-list
     display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    height: 200px
     padding:
       left: 0
     list-style: none
   &__sevices-element
     margin:
+      right: 70px
       bottom: 25px
     a
       color: #ffffff
+      text-decoration: none
+      transition: color 0.2s ease
       &:hover, &:focus
         color: $orange
         text-decoration: none
   &__contacts
+    margin:
+      right: 100px
+  &__contacts-title
     font-size: 17px
+    text-transform: uppercase
     font-weight: 700
     line-height: 21px
+    width: 110px
     margin:
+      top: 0
       bottom: 50px
   &__contacts-list
     display: flex
+    flex-direction: column
     padding:
       left: 0
     list-style: none
   &__contacts-element
+    margin:
+      bottom: 25px
+    p
+      margin:
+        top: 0
+        bottom: 0
+  &__copyright
+    display: flex
+    justify-content: flex-start
     a
       color: #ffffff
-      &:hover, &:focus
-        color: $orange
-        text-decoration: none
-  &__copyright
-    margin:
-      top: 72px
+      text-decoration: none
+      font-size: 17px
+      line-height: 21px
+      margin:
+        top: 7px
+        left: auto
+        right: auto
+      transition: color 0.2s ease
+    @media (max-width: 1600px)
+      width: 100%
+    &:hover, &:focus
+      color: $orange
+      text-decoration: none
+
+  .owl-item
+    height: 100%
 

@@ -85,8 +85,8 @@ gulp.task("clean", function() {
 
 gulp.task('script', function () {
   return gulp.src([
-//		"libs/jquery/dist/jquery.min.js",    //подключение библиотек
-
+		"libs/jquery/dist/jquery.min.js",    //подключение библиотек
+    "libs/owl.carousel.min.js",
 
   	"js/script.js" // всегда в конце
   	])

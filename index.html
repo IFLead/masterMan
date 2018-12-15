@@ -137,98 +137,143 @@
     </section>
 
     <section class="request">
-      <h2 class="request__title">Заявка</h2>
-      <p class="request__subtitle">Оставляйте заявку и ждите звонка в течение 10 минут.</p>
-      <p class="request__description">Заполните минимум 2 поля, чтобы отправить заявку: Имя и номер телефона</p>
-      <form action="POST" class="request__form form">
-        <input type="text" class="form__name" name="user-name" placeholder="Имя*">
-        <input type="phone" class="form__phone" name="user-phone" placeholder="Номер телефона*">
-        <select name="type-of-service" id="">
-          <option value="">Тип Услуги</option>
-          <option value="">Тип услуги 2</option>
-          <option value="">Тип услуги 3</option>
-        </select>
-        <select name="service" id="">
-          <option value="">Вид услуги</option>
-          <option value="">Услуга 2</option>
-          <option value="">Услуга 3</option>
-        </select>
-        <input type="email" class="form__email" name="user-email" placeholder="E-mail">
-        <textarea class="form__textarea" name="" id="" >Сообщение</textarea>
-        <button class="form__button" type="submit">Отправить</button>
-      </form>
+      <div class="container">
+        <h2 class="request__title">Заявка</h2>
+        <p class="request__subtitle">Оставляйте заявку и ждите звонка в течение 10 минут.</p>
+        <p class="request__description">Заполните минимум 2 поля, чтобы отправить заявку: Имя и номер телефона</p>
+        <form action="POST" class="request__form form">
+          <div class="form-container">
+            <input type="text" class="form__name" name="user-name" placeholder="Имя*">
+            <input type="phone" class="form__phone" name="user-phone" placeholder="Номер телефона*">
+            <select name="type-of-service" id="">
+              <option value="">Тип Услуги</option>
+              <option value="">Тип услуги 2</option>
+              <option value="">Тип услуги 3</option>
+            </select>
+            <select name="service" id="">
+              <option value="">Вид услуги</option>
+              <option value="">Услуга 2</option>
+              <option value="">Услуга 3</option>
+            </select>
+            <input type="email" class="form__email" name="user-email" placeholder="E-mail">
+            <textarea class="form__textarea" name="" id="" >Сообщение</textarea>
+          </div>
+          <button class="form__button" type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы</h2>
-      <p class="reviews__subtitle">Это важно для нас</p>
-      <ul class="reviews__list">
-        <li class="reviews__element">
-          <div class="reviews__element-information">
-            <h3 class="reviews__element-name">Александр Дроздов</h3>
-            <p class="reviews__element-date">10 Ноября 2018</p>
-          </div>
-          <p class="reviews__element-content">Спасибо компании "MASTERMAN", которая предоставила свои услуги! Мастера поклеили обои, собрали мебель. Вложились в оговоренные сроки и справились с работой. Рекомендую!</p>
-          <ul class="reviews__stars">
-            <li class="reviews__stars--full"></li>
-            <li class="reviews__stars--full"></li>
-            <li class="reviews__stars--full"></li>
-            <li class="reviews__stars--full"></li>
-            <li class="reviews__stars--full"></li>
-          </ul>
-        </li>
-
-        <li class="reviews__element">
-            <div class="reviews__element-information">
-              <h3 class="reviews__element-name">Татьяна Лескова</h3>
-              <p class="reviews__element-date">21 Ноября 2018</p>
+      <div class="container">
+        <h2 class="reviews__title">Отзывы</h2>
+        <p class="reviews__subtitle">Это важно для нас</p>
+        <ul class="reviews__list owl-carousel owl-theme">
+          <li class="reviews__element">
+            <div class="reviews__element-wrapper">
+              <div class="reviews__element-information">
+                <h3 class="reviews__element-name">Александр Дроздов</h3>
+                <p class="reviews__element-date">10 Ноября 2018</p>
+              </div>
+              <p class="reviews__element-content">Спасибо компании "MASTERMAN", которая предоставила свои услуги! Мастера поклеили обои, собрали мебель. Вложились в оговоренные сроки и справились с работой. Рекомендую!</p>
+              <ul class="reviews__stars">
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+              </ul>
             </div>
-            <p class="reviews__element-content">Добрый день, хочу поделиться мнением о компании "MASTERMAN". Изначально постигали сомнения на счет этой компании, ведь ни разу у них не заказывала услуги. И когда же я все таки решилась, то об этом ни на секунду не пожалела. Мастера положили плитку быстро и недорого. Впредь буду обращаться только к этой компании. Спасибо!</p>
-            <ul class="reviews__stars">
-              <li class="reviews__stars--full"></li>
-              <li class="reviews__stars--full"></li>
-              <li class="reviews__stars--full"></li>
-              <li class="reviews__stars--full"></li>
-              <li class="reviews__stars--full"></li>
-            </ul>
           </li>
-      </ul>
+
+          <li class="reviews__element">
+            <div class="reviews__element-wrapper">
+              <div class="reviews__element-information">
+                <h3 class="reviews__element-name">Татьяна Лескова</h3>
+                <p class="reviews__element-date">21 Ноября 2018</p>
+              </div>
+              <p class="reviews__element-content">Добрый день, хочу поделиться мнением о компании "MASTERMAN". Изначально постигали сомнения на счет этой компании, ведь ни разу у них не заказывала услуги. И когда же я все таки решилась, то об этом ни на секунду не пожалела. Мастера положили плитку быстро и недорого. Впредь буду обращаться только к этой компании. Спасибо!</p>
+              <ul class="reviews__stars">
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="reviews__element">
+            <div class="reviews__element-wrapper">
+              <div class="reviews__element-information">
+                <h3 class="reviews__element-name">Татьяна Лескова</h3>
+                <p class="reviews__element-date">21 Ноября 2018</p>
+              </div>
+              <p class="reviews__element-content">Добрый день, хочу поделиться мнением о компании "MASTERMAN". Изначально постигали сомнения на счет этой компании, ведь ни разу у них не заказывала услуги. И когда же я все таки решилась, то об этом ни на секунду не пожалела. Мастера положили плитку быстро и недорого. Впредь буду обращаться только к этой компании. Спасибо!</p>
+              <ul class="reviews__stars">
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+                <li class="star star--full"></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bottom-navigation">
+      <div class="container">
+        <ul class="bottom-navigation__list">
+          <li class="bottom-navigation__element"><a href="#">Главная</a></li>
+          <li class="bottom-navigation__element"><a href="#">Услуги</a></li>
+          <li class="bottom-navigation__element"><a href="#">Преимущества</a></li>
+          <li class="bottom-navigation__element"><a href="#">Бонусы</a></li>
+          <li class="bottom-navigation__element"><a href="#">Заявка</a></li>
+          <li class="bottom-navigation__element"><a href="#">Контакты</a></li>
+        </ul>
+      </div>
     </section>
 
     <footer class="main-footer">
-      <div class="main-footer__navigation navigation">
-        <ul class="navigation__list">
-          <li class="navigation__element"><a href="#">Главная</a></li>
-          <li class="navigation__element"><a href="#">Услуги</a></li>
-          <li class="navigation__element"><a href="#">Преимущества</a></li>
-          <li class="navigation__element"><a href="#">Бонусы</a></li>
-          <li class="navigation__element"><a href="#">Заявка</a></li>
-          <li class="navigation__element"><a href="#">Контакты</a></li>
-        </ul>
+      <div class="container">
+        <div class="main-footer__logo-wrapper">
+          <img src="img/svg/logo.svg" alt="MasterMan" class="main-footer__logo" width="399" height="72">
+        </div>
+        <div class="main-footer__sevices">
+          <h3 class="main-footer__sevices-title">Основные услуги</h3>
+          <ul class="main-footer__sevices-list">
+            <li class="main-footer__sevices-element"><a href="#">Сантехнические работы</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Электромонтажные работы</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Кровельные работы</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Отделочные работы</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Установка бытовой техники</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Сборка/разборка/ремонт мебели</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Металлоконструкционные работы</a></li>
+            <li class="main-footer__sevices-element"><a href="#">Услуги плотника</a></li>
+          </ul>
+        </div>
+        <div class="main-footer__contacts">
+          <h3 class="main-footer__contacts-title">Контакты</h3>
+          <ul class="main-footer__contacts-list">
+            <li class="main-footer__contacts-element">
+              <p>Номер телефона:</p>
+              <p>+38(071)-340-99-71</p>
+            </li>
+            <li class="main-footer__contacts-element">
+              <p>E-mail:</p>
+              <p>Master.man@gmail.com</p>
+            </li>
+            <li class="main-footer__contacts-element">
+              <p>Работаем по всему Донецку</p>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__copyright">
+          <a href="#">@art9.studio</a>
+        </div>
+
       </div>
-      <img src="" alt="MasterMan" class="main-footer__logo">
-      <div class="main-footer__sevices">
-        <h3 class="main-footer__sevices-title">Основные услуги</h3>
-        <ul class="main-footer__sevices-list">
-          <li class="main-footer__sevices-element"><a href="#">Сантехнические работы</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Электромонтажные работы</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Кровельные работы</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Отделочные работы</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Установка бытовой техники</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Сборка/разборка/ремонт мебели</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Металлоконструкционные работы</a></li>
-          <li class="main-footer__sevices-element"><a href="#">Услуги плотника</a></li>
-        </ul>
-      </div>
-      <div class="main-footer__contacts">
-        <h3 class="main-footer__contacts-title">Контакты</h3>
-        <ul class="main-footer__contacts-list">
-          <li class="main-footer__contacts-element">Номер телефона:+38(071)-340-99-71</li>
-          <li class="main-footer__contacts-element">E-mail:Master.man@gmail.com</li>
-          <li class="main-footer__contacts-element">Работаем по всему Донецку</li>
-        </ul>
-      </div>
-      <p class="main-footer__copyright">@art9.studio</p>
     </footer>
   <script src="js/script.min.js" ></script>
   </body>
