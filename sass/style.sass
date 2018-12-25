@@ -61,6 +61,8 @@ body
   margin:
     left: auto
     right: auto
+  @media (max-width: 1199.98px)
+    width: 100%
 
 
 .main-header
@@ -71,6 +73,9 @@ body
   &__logo
     margin:
       right: 85px
+    @media (max-width: 1199.98px)
+      margin:
+        right: 60px
   &__list
     padding:
       left: 0
@@ -80,9 +85,14 @@ body
     margin:
       top: 0
       bottom: 0
+    @media (max-width: 991.98px)
+      display: none
   &__element
     margin:
       right: 76px
+    @media (max-width: 1199.98px)
+      margin:
+        right: 57px
     a
       color: #ffffff
       transition: color 0.2s ease
@@ -101,6 +111,11 @@ body
   padding:
     top: 23px
     bottom: 51px
+  @media (max-width: 1700px)
+    background-position: center center
+  @media (max-width: 991.98px)
+    padding:
+      bottom: 0px
   &::after
     content: ""
     position: absolute
@@ -127,6 +142,8 @@ body
       right: auto
     margin:
       bottom: 35px
+    @media (max-width: 991.98px)
+      font-size: 80px
     span
       color: $orange
   &__description
@@ -137,12 +154,18 @@ body
       left: auto
       right: auto
       bottom: 30px
+    @media (max-width: 991.98px)
+      width: 550px
   .actions
     margin:
       top: 90px
       bottom: 182px
     display: flex
     justify-content: center
+    @media (max-width: 991.98px)
+      margin:
+        bottom: 140px
+
     &__button
       font-family: "ProximaNova", "Arial", sans-serif
       border-radius: 32px
@@ -173,24 +196,49 @@ body
       top: 0
       bottom: 0
     justify-content: center
+    @media (max-width: 1199.98px)
+      justify-content: space-around
+    @media (max-width: 991.98px)
+      flex-direction: column
+      width: 320px
+      margin:
+        left: auto
+        right: auto
+      padding:
+        top: 40px
+        bottom: 10px
+
+    &__wrapper
+      @media (max-width: 991.98px)
+        background-color: rgba(0, 0, 0, 0.5)
     &__element
       margin:
         right: 137px
       padding:
         left: 35px
       background-repeat: no-repeat
+      @media (max-width: 1199.98px)
+        margin:
+          right: 0
+          bottom: 20px
       &--phone
         background-image: url("../img/svg/phone.svg")
         background-position: 9px center
         background-size: auto 20px
+        @media (max-width: 991.98px)
+          background-position: 0 center
       &--email
         background-image: url("../img/svg/email.svg")
         background-position: 3px center
         background-size: auto 20px
+        @media (max-width: 991.98px)
+          background-position: 0 center
       &--address
         background-image: url("../img/svg/map.svg")
         background-position: 8px center
         background-size: auto 20px
+        @media (max-width: 991.98px)
+          background-position: 0 center
 
 .services
   padding:
@@ -248,12 +296,23 @@ body
     margin:
       left: auto
       right: auto
+    @media (max-width: 1199.98px)
+      width: 100%
+      padding:
+        left: 50px
+        right: 50px
+      grid-column-gap: 0
+      justify-content: space-between
+      grid-template-columns: 30% 30% 30%
+    @media (max-width: 991.98px)
+      grid-template-columns: 45% 45%
   &__element
     position: relative
     border-radius: 22px
     background-color: $grey
     background-size: cover
     background-repeat: no-repeat
+
     &::before
       border-radius: 22px
       content: ""
@@ -277,9 +336,12 @@ body
         left: 30px
         right: 30px
       transition: all 0.2s ease
+      @media (max-width: 991.98px)
+        min-height: 250px
     &--plumber
       background-image: url("../img/service1.jpg")
       background-position: center -105px
+
     &--electric-installation
       background-image: url("../img/service2.jpg")
       background-position: center -95px
@@ -308,6 +370,8 @@ body
     &--other
       background-image: url("../img/service9.jpg")
       background-position: center 0
+    @media (max-width: 1199.98px)
+      background-position: center center
   &__element-title
     color: #ffffff
     font-size: 20px
@@ -329,6 +393,8 @@ body
   background-repeat: no-repeat
   background-position: 0 -500px
   background-size: cover
+  @media (max-width: 1760px)
+    background-position: 0 center
   &::after
     content: ""
     position: absolute
@@ -388,6 +454,18 @@ body
       left: auto
       right: auto
       bottom: 0
+    @media (max-width: 1199.98px)
+      width: 100%
+      padding:
+        left: 20px
+        right: 20px
+      justify-content: space-between
+      grid-template-columns: 30% 30% 30%
+      grid-gap: 0
+    @media (max-width: 991.98px)
+      grid-template-columns: 40%
+      grid-row-gap: 40px
+      justify-content: center
   &__element
     padding:
       top: 105px
@@ -396,6 +474,8 @@ body
     background-color: rgba(255, 255, 255, 0.15)
     background-repeat: no-repeat
     background-size: 47px 47px
+    @media (max-width: 991.98px)
+      min-height: 300px
     &--fast
       background-image: url(../img/svg/time.svg)
       background-position: center 25px
@@ -429,8 +509,11 @@ body
 .bonus
   padding:
     top: 100px
-  background-image: url("../img/svg/procent.jpg")
+  //background-image: url("../img/svg/percent.svg")
   background-repeat: round
+  @media (max-width: 991.98px)
+    padding:
+      top: 70px
   .container
     background-image: url("../img/svg/discount.svg")
     background-repeat: no-repeat
@@ -438,6 +521,16 @@ body
     background-position: 40px -55px
     padding:
       bottom: 150px
+    display: flex
+    flex-direction: column
+    @media (max-width: 1199.98px)
+      background-size: 450px auto
+      background-position: 50px -20px
+    @media (max-width: 991.98px)
+      padding:
+        bottom: 230px
+      background-size: 350px auto
+      background-position: center 110px
   &__title
     position: relative
     font-size: 20px
@@ -474,6 +567,9 @@ body
       left: auto
       right: auto
       bottom: 95px
+    @media (max-width: 991.98px)
+      margin:
+        bottom: 40px
   &__description
     color: #000000
     line-height: 30px
@@ -481,6 +577,18 @@ body
     margin:
       bottom: 20px
       left: 575px
+    @media (max-width: 1199.98px)
+      width: 400px
+      margin:
+        left: auto
+        right: 70px
+    @media (max-width: 991.98px)
+      width: 460px
+      text-align: center
+      margin:
+        left: auto
+        right: auto
+        top: 0
     span
       color: $orange
 
@@ -494,6 +602,8 @@ body
   background-repeat: no-repeat
   background-size: cover
   background-position: 0 -860px
+  @media (max-width: 1300px)
+    background-position: 0 center
   &::after
     content: ""
     position: absolute
@@ -612,7 +722,6 @@ body
         bottom: 0
 
 .reviews
-
   padding:
     top: 96px
   &__title
@@ -659,6 +768,13 @@ body
     padding:
       left: 0
     list-style: none
+    @media (max-width: 1455px)
+      margin:
+        left: auto
+        right: auto
+    @media (max-width: 1199.98px)
+      width: 800px
+
     .owl-stage
       display: flex
     .owl-stage-outer
@@ -687,11 +803,11 @@ body
             bottom: auto
       .owl-prev
         &::before
-          left: -81px
+          left: -65px
           transform: rotate(-180deg)
       .owl-next
         &::before
-          right: -81px
+          right: -65px
     li:nth-child(2n)
       margin:
         right: 0
@@ -709,6 +825,13 @@ body
       bottom: 30px
       right: 32px
       top: 60px
+    margin:
+      right: 80px
+    @media (max-width: 1199.98px)
+      margin:
+        right: 50px
+      width: 375px
+      background-position: 0 center
     &-wrapper
       position: relative
       z-index: 20
@@ -796,13 +919,20 @@ body
       bottom: 30px
     list-style: none
     display: flex
+    flex-wrap: wrap
+    @media (max-width: 1199.98px)
+      margin:
+        left: auto
+        right: auto
+      width: 850px
+
+      justify-content: space-between
   li:last-child
     margin:
       right: 0
   &__element
     margin:
       right: 82px
-
     a
       font-size: 17px
       line-height: 21px
@@ -828,6 +958,8 @@ body
     @media (max-width: 1600px)
       width: 1200px
       justify-content: space-around
+    @media (max-width: 1199.98px)
+      width: 100%
   &__logo-wrapper
     display: flex
     justify-content: center
@@ -909,6 +1041,7 @@ body
   &__copyright
     display: flex
     justify-content: flex-start
+    width: 100%
     a
       color: #ffffff
       text-decoration: none
@@ -919,8 +1052,6 @@ body
         left: auto
         right: auto
       transition: color 0.2s ease
-    @media (max-width: 1600px)
-      width: 100%
     &:hover, &:focus
       color: $orange
       text-decoration: none

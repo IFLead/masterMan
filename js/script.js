@@ -5,16 +5,15 @@ $(function () {
   $('.reviews__list').owlCarousel({
       nav: true,
       loop: true,
-      margin: 80,
       responsiveClass: true,
       autoWidth: true,
       dots: false,
       responsive: {
           0: {
-              items: 1
+            items: 1
           },
-          1000: {
-              items: 2
+          1200: {
+            items: 2
           }
       },
       onInitialized: function () {
