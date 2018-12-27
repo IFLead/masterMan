@@ -1,5 +1,4 @@
 $(function () {
-
   var $items = $('.reviews__list .reviews__element');
 
   $('.reviews__list').owlCarousel({

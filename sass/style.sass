@@ -70,6 +70,9 @@ body
   margin:
     left: 50px
     bottom: 175px
+  @media (max-width: 575.98px)
+    margin:
+      bottom: 120px
   &__logo
     margin:
       right: 85px
@@ -144,6 +147,17 @@ body
       bottom: 35px
     @media (max-width: 991.98px)
       font-size: 80px
+      line-height: 100px
+    @media (max-width: 767.98px)
+      font-size: 70px
+      line-height: 90px
+      width: 100%
+      padding:
+        left: 20px
+        right: 20px
+    @media (max-width: 575.98px)
+      font-size: 40px
+      line-height: 50px
     span
       color: $orange
   &__description
@@ -156,6 +170,14 @@ body
       bottom: 30px
     @media (max-width: 991.98px)
       width: 550px
+    @media (max-width: 767.98px)
+      width: 500px
+    @media (max-width: 575.98px)
+      font-size: 10px
+      line-height: 15px
+      width: 261px
+      margin:
+        bottom: 20px
   .actions
     margin:
       top: 90px
@@ -165,25 +187,47 @@ body
     @media (max-width: 991.98px)
       margin:
         bottom: 140px
-
+    @media (max-width: 575.98px)
+      margin:
+        top: 76px
+        bottom: 111px
     &__button
       font-family: "ProximaNova", "Arial", sans-serif
       border-radius: 32px
       font-size: 16px
       line-height: 20px
       border: 0px
+      text-align: center
       padding:
-        left: 64px
-        right: 64px
+        left: 35px
+        right: 35px
         top: 16px
         bottom: 15px
       max-width: 300px
       cursor: pointer
+      width: 260px
+      @media (max-width: 767.98px)
+        width: 220px
+      @media (max-width: 575.98px)
+        width: 142px
+        font-size: 10px
+        line-height: 12px
+        padding:
+          left: 15px
+          right: 15px
+          top: 9px
+          bottom: 9px
       &--service
         background-color: $orange
         color: #ffffff
         margin:
           right: 80px
+        @media (max-width: 767.98px)
+          margin:
+            right: 50px
+        @media (max-width: 575.98px)
+          margin:
+            right: 16px
       &--request
         background-color: #ffffff
         color: $orange
@@ -206,7 +250,12 @@ body
         right: auto
       padding:
         top: 40px
-        bottom: 10px
+        bottom: 30px
+    @media (max-width: 575.98px)
+      width: 186px
+      padding:
+        top: 12px
+        bottom: 11px
 
     &__wrapper
       @media (max-width: 991.98px)
@@ -217,33 +266,43 @@ body
       padding:
         left: 35px
       background-repeat: no-repeat
+      background-size: auto 20px
       @media (max-width: 1199.98px)
         margin:
           right: 0
           bottom: 20px
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
+        background-size: auto 12px
+        padding:
+          left: 20px
       &--phone
         background-image: url("../img/svg/phone.svg")
         background-position: 9px center
-        background-size: auto 20px
         @media (max-width: 991.98px)
           background-position: 0 center
       &--email
         background-image: url("../img/svg/email.svg")
         background-position: 3px center
-        background-size: auto 20px
         @media (max-width: 991.98px)
           background-position: 0 center
       &--address
         background-image: url("../img/svg/map.svg")
         background-position: 8px center
-        background-size: auto 20px
         @media (max-width: 991.98px)
           background-position: 0 center
+          margin:
+            bottom: 0
 
 .services
   padding:
     top: 100px
     bottom: 100px
+  @media (max-width: 575.98px)
+    padding:
+      top: 50px
+      bottom: 50px
   &__title
     position: relative
     font-size: 20px
@@ -258,6 +317,9 @@ body
       left: auto
       right: auto
       bottom: 15px
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
     &::before
       content: ""
       position: absolute
@@ -270,6 +332,8 @@ body
       margin:
         left: auto
         right: auto
+      @media (max-width: 575.98px)
+        width: 30px
   &__subtitle
     font-size: 14px
     color: #000000
@@ -281,6 +345,15 @@ body
       left: auto
       right: auto
     width: 275px
+    text-align: center
+    @media (max-width: 767.98px)
+      margin:
+        bottom: 70px
+    @media (max-width: 575.98px)
+      font-size: 9px
+      line-height: 11px
+      margin:
+        bottom: 51px
   &__list
     padding:
       left: 0
@@ -306,13 +379,22 @@ body
       grid-template-columns: 30% 30% 30%
     @media (max-width: 991.98px)
       grid-template-columns: 45% 45%
+    @media (max-width: 767.98px)
+      grid-row-gap: 60px
+      grid-template-columns: 70%
+      justify-content: center
+    @media (max-width: 575.98px)
+      grid-template-columns: 65%
+      grid-row-gap: 30px
+      padding:
+        left: 0
+        right: 0
   &__element
     position: relative
     border-radius: 22px
     background-color: $grey
     background-size: cover
     background-repeat: no-repeat
-
     &::before
       border-radius: 22px
       content: ""
@@ -338,10 +420,13 @@ body
       transition: all 0.2s ease
       @media (max-width: 991.98px)
         min-height: 250px
+      @media (max-width: 767.98px)
+        min-height: 300px
+      @media (max-width: 575.98px)
+        min-height: 153px
     &--plumber
       background-image: url("../img/service1.jpg")
       background-position: center -105px
-
     &--electric-installation
       background-image: url("../img/service2.jpg")
       background-position: center -95px
@@ -382,6 +467,9 @@ body
       bottom: 0
       left: auto
       right: auto
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
 
 .advantages
   position: relative
@@ -395,6 +483,10 @@ body
   background-size: cover
   @media (max-width: 1760px)
     background-position: 0 center
+  @media (max-width: 575.98px)
+    padding:
+      top: 50px
+      bottom: 50px
   &::after
     content: ""
     position: absolute
@@ -421,6 +513,9 @@ body
       left: auto
       right: auto
       bottom: 15px
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
     &::before
       content: ""
       position: absolute
@@ -433,15 +528,26 @@ body
       margin:
         left: auto
         right: auto
+      @media (max-width: 575.98px)
+        width: 40px
   &__subtitle
     color: $orange
     font-size: 14px
     line-height: 17px
+    text-align: center
     width: 290px
     margin:
       left: auto
       right: auto
       bottom: 100px
+    @media (max-width: 767.98px)
+      margin:
+        bottom: 70px
+    @media (max-width: 575.98px)
+      font-size: 9px
+      line-height: 11px
+      margin:
+        bottom: 50px
   &__list
     display: grid
     grid-template-columns: 334px 334px 334px
@@ -466,6 +572,12 @@ body
       grid-template-columns: 40%
       grid-row-gap: 40px
       justify-content: center
+    @media (max-width: 767.98px)
+      grid-template-columns: 330px
+    @media (max-width: 575.98px)
+      grid-template-columns: 192px
+      grid-row-gap: 20px
+
   &__element
     padding:
       top: 105px
@@ -474,17 +586,22 @@ body
     background-color: rgba(255, 255, 255, 0.15)
     background-repeat: no-repeat
     background-size: 47px 47px
+    background-position: center 25px
     @media (max-width: 991.98px)
       min-height: 300px
+    @media (max-width: 575.98px)
+      min-height: 180px
+      padding:
+        top: 56px
+        bottom: 16px
+      background-size: 26px 26px
+      background-position: center 15px
     &--fast
       background-image: url(../img/svg/time.svg)
-      background-position: center 25px
     &--neatly
       background-image: url(../img/svg/certificate.svg)
-      background-position: center 25px
     &--cheap
       background-image: url(../img/svg/price.svg)
-      background-position: center 25px
   &__element-title
     font-size: 17px
     font-weight: 700
@@ -497,6 +614,11 @@ body
       bottom: 25px
       left: auto
       right: auto
+    @media (max-width: 575.98px)
+      font-size: 13px
+      line-height: 16px
+      margin:
+        bottom: 20px
   &__element-description
     width: 264px
     margin:
@@ -504,6 +626,10 @@ body
       right: auto
       bottom: 0
     text-align: center
+    @media (max-width: 575.98px)
+      width: 164px
+      font-size: 10px
+      line-height: 12px
 
 
 .bonus
@@ -514,6 +640,9 @@ body
   @media (max-width: 991.98px)
     padding:
       top: 70px
+  @media (max-width: 575.98px)
+    padding:
+      top: 50px
   .container
     background-image: url("../img/svg/discount.svg")
     background-repeat: no-repeat
@@ -531,6 +660,11 @@ body
         bottom: 230px
       background-size: 350px auto
       background-position: center 110px
+    @media (max-width: 575.98px)
+      background-size: 174px auto
+      background-position: center 70px
+      padding:
+        bottom: 135px
   &__title
     position: relative
     font-size: 20px
@@ -545,6 +679,11 @@ body
       left: auto
       right: auto
       bottom: 15px
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
+      margin:
+        bottom: 0
     &::before
       content: ""
       position: absolute
@@ -562,6 +701,7 @@ body
     font-size: 14px
     line-height: 17px
     font-weight: 700
+    text-align: center
     width: 180px
     margin:
       left: auto
@@ -570,6 +710,12 @@ body
     @media (max-width: 991.98px)
       margin:
         bottom: 40px
+    @media (max-width: 575.98px)
+      font-size: 9px
+      line-height: 11px
+      margin:
+        top: 15px
+        bottom: 21px
   &__description
     color: #000000
     line-height: 30px
@@ -589,6 +735,10 @@ body
         left: auto
         right: auto
         top: 0
+    @media (max-width: 575.98px)
+      width: 280px
+      font-size: 10px
+      line-height: 12px
     span
       color: $orange
 
@@ -604,6 +754,10 @@ body
   background-position: 0 -860px
   @media (max-width: 1300px)
     background-position: 0 center
+  @media (max-width: 575.98px)
+    padding:
+      top: 50px
+      bottom: 50px
   &::after
     content: ""
     position: absolute
@@ -629,6 +783,11 @@ body
       left: auto
       right: auto
       bottom: 10px
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
+      margin:
+        bottom: 15px
     &::before
       content: ""
       position: absolute
@@ -653,14 +812,28 @@ body
       right: auto
       bottom: 100px
       top: 0
+    @media (max-width: 575.98px)
+      width: 250px
+      font-size: 9px
+      line-height: 11px
+      margin:
+        bottom: 50px
   &__description
     line-height: 17px
     font-size: 14px
     width: 495px
+    text-align: center
     margin:
       bottom: 20px
       left: auto
       right: auto
+    @media (max-width: 575.98px)
+      font-size: 9px
+      line-height: 15px
+      width: 222px
+      margin:
+        bottom: 10px
+
   .form
     width: 572px
     display: flex
@@ -669,12 +842,22 @@ body
     margin:
       left: auto
       right: auto
+    @media (max-width: 575.98px)
+      width: 100%
     &-container
       width: 100%
       display: grid
       grid-template-columns: 260px 260px
       justify-content: space-between
       grid-row-gap: 30px
+      @media (max-width: 767.98px)
+        grid-template-columns: 220px 220px
+        padding:
+          left: 36px
+          right: 36px
+      @media (max-width: 575.98px)
+        grid-template-columns: 47% 47%
+        grid-row-gap: 10px
     input, textarea, select
       font-family: inherit
       background-color: #000000
@@ -688,17 +871,31 @@ body
         top: 16px
         bottom: 15px
         right: 20px
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
+        padding:
+          left: 21px
+          right: 20px
+          top: 10px
+          bottom: 10px
     input::placeholder, textarea::placeholder, select::placeholder
       color: #ffffff
       font-size: 16px
       line-height: 30px
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
     &__email
       grid-column: 1/-1
-    &__textarea
+    .form__textarea
       grid-column: 1/-1
       padding:
         top: 18px
       min-height: 114px
+      @media (max-width: 575.98px)
+        padding:
+          top: 16px
     &__button
       border-radius: 32px
       background-color: $orange
@@ -720,10 +917,24 @@ body
         left: auto
         right: auto
         bottom: 0
+      @media (max-width: 575.98px)
+        margin:
+          top: 10px
+        font-size: 10px
+        line-height: 12px
+        width: 142px
+        padding:
+          top: 10px
+          bottom: 10px
+
 
 .reviews
   padding:
     top: 96px
+  @media (max-width: 575.98px)
+    padding:
+      top: 50px
+      bottom: 20px
   &__title
     position: relative
     font-size: 20px
@@ -738,6 +949,9 @@ body
       left: auto
       right: auto
       bottom: 15px
+    @media (max-width: 575.98px)
+      font-size: 16px
+      line-height: 20px
     &::before
       content: ""
       position: absolute
@@ -762,6 +976,12 @@ body
       right: auto
       bottom: 65px
       top: 0
+    @media (max-width: 575.98px)
+      font-size: 9px
+      line-height: 11px
+      margin:
+        bottom: 40px
+      width: 100px
   &__list
     position: relative
     width: 988px
@@ -774,13 +994,25 @@ body
         right: auto
     @media (max-width: 1199.98px)
       width: 800px
-
+    @media (max-width: 991.98px)
+      width: 454px
+    @media (max-width: 767.98px)
+      width: 400px
+    @media (max-width: 575.98px)
+      width: 274px
+      margin:
+        bottom: 0
+    @media (max-width: 374.98px)
+      width: 250px
     .owl-stage
       display: flex
     .owl-stage-outer
       width: 100%
       padding:
         top: 33px
+      @media (max-width: 575.98px)
+        padding:
+          top: 20px
     .owl-nav
       .owl-prev, .owl-next
         width: 1px
@@ -801,13 +1033,25 @@ body
           margin:
             top: auto
             bottom: auto
+          @media (max-width: 575.98px)
+            width: 12px
+            height: 23px
+
       .owl-prev
         &::before
           left: -65px
           transform: rotate(-180deg)
+          @media (max-width: 575.98px)
+            left: -35px
+          @media (max-width: 374.98px)
+            left: -26px
       .owl-next
         &::before
           right: -65px
+          @media (max-width: 575.98px)
+            right: -30px
+          @media (max-width: 374.98px)
+            right: -26px
     li:nth-child(2n)
       margin:
         right: 0
@@ -832,6 +1076,17 @@ body
         right: 50px
       width: 375px
       background-position: 0 center
+    @media (max-width: 991.98px)
+      width: 454px
+    @media (max-width: 767.98px)
+      width: 400px
+    @media (max-width: 575.98px)
+      width: 274px
+      padding:
+        top: 33px
+        bottom: 31px
+    @media (max-width: 374.98px)
+      width: 250px
     &-wrapper
       position: relative
       z-index: 20
@@ -852,6 +1107,10 @@ body
       margin:
         left: auto
         right: auto
+      @media (max-width: 575.98px)
+        width: 40px
+        height: 40px
+        top: -20px
     &::after
       content: ""
       position: absolute
@@ -866,6 +1125,9 @@ body
       justify-content: space-between
       margin:
         bottom: 30px
+      @media (max-width: 575.98px)
+        margin:
+          bottom: 20px
     &-name
       font-size: 17px
       line-height: 21px
@@ -873,17 +1135,28 @@ body
       margin:
         top: 0
         bottom: 0
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
     &-date
       font-size: 17px
       line-height: 21px
       margin:
         top: 0
         bottom: 0
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
     &-content
       line-height: 25px
       margin:
         bottom: 30px
         top: 0
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 14px
+        margin:
+          bottom: 30px
   &__stars
     display: flex
     list-style: none
@@ -895,6 +1168,9 @@ body
       left: 0
     li:nth-child(2n)
         margin-right: 10px
+        @media (max-width: 575.98px)
+          margin:
+            right: 6px
     li:last-child
       margin-right: 0
     .star
@@ -902,6 +1178,11 @@ body
       height: 20px
       margin:
         right: 10px
+      @media (max-width: 575.98px)
+        width: 13px
+        height: 12px
+        margin:
+          right: 6px
 
       &--full
         background-image: url("../img/svg/star.svg")
@@ -911,6 +1192,8 @@ body
 .bottom-navigation
   margin:
     top: 95px
+  @media (max-width: 767.98px)
+    display: none
   &__list
     padding:
       left: 0
@@ -925,14 +1208,21 @@ body
         left: auto
         right: auto
       width: 850px
-
       justify-content: space-between
+    @media (max-width: 991.98px)
+      width: 100%
+      padding:
+        left: 50px
+        right: 50px
   li:last-child
     margin:
       right: 0
   &__element
     margin:
       right: 82px
+    @media (max-width: 1199.98px)
+      margin:
+        right: 0
     a
       font-size: 17px
       line-height: 21px
@@ -960,6 +1250,16 @@ body
       justify-content: space-around
     @media (max-width: 1199.98px)
       width: 100%
+      padding:
+        left: 38px
+        right: 38px
+    @media (max-width: 991.98px)
+      flex-direction: column
+      align-items: center
+    @media (max-width: 575.98px)
+      padding:
+        left: 0
+        right: 0
   &__logo-wrapper
     display: flex
     justify-content: center
@@ -973,15 +1273,26 @@ body
         top: 60px
         bottom: 30px
         right: 0
+    @media (max-width: 575.98px)
+      width: 193px
+      margin:
+        top: 0
+        bottom: 50px
   &__logo
     margin:
       left: auto
       right: auto
 
+
   &__sevices
     width: 530px
     margin:
       right: 76px
+    @media (max-width: 991.98px)
+      margin:
+        right: 0
+    @media (max-width: 575.98px)
+      width: 300px
   &__sevices-title
     font-size: 17px
     text-transform: uppercase
@@ -994,6 +1305,11 @@ body
       bottom: 50px
       left: auto
       right: auto
+    @media (max-width: 575.98px)
+      font-size: 10px
+      line-height: 12px
+      margin:
+        bottom: 25px
   &__sevices-list
     display: flex
     flex-wrap: wrap
@@ -1002,10 +1318,18 @@ body
     padding:
       left: 0
     list-style: none
+    @media (max-width: 575.98px)
+      height: 138px
   &__sevices-element
     margin:
       right: 70px
       bottom: 25px
+    @media (max-width: 575.98px)
+      font-size: 10px
+      line-height: 12px
+      margin:
+        bottom: 20px
+        right: 20px
     a
       color: #ffffff
       text-decoration: none
@@ -1014,17 +1338,34 @@ body
         color: $orange
         text-decoration: none
   &__contacts
+    width: 210px
     margin:
       right: 100px
+    @media (max-width: 991.98px)
+      width: 280px
+      margin:
+        right: 0
+    @media (max-width: 575.98px)
+      width: 166px
   &__contacts-title
     font-size: 17px
     text-transform: uppercase
     font-weight: 700
     line-height: 21px
+    text-align: center
     width: 110px
     margin:
       top: 0
       bottom: 50px
+    @media (max-width: 991.98px)
+      margin:
+        left: auto
+        right: auto
+    @media (max-width: 575.98px)
+      font-size: 10px
+      line-height: 12px
+      margin:
+        bottom: 25px
   &__contacts-list
     display: flex
     flex-direction: column
@@ -1034,6 +1375,11 @@ body
   &__contacts-element
     margin:
       bottom: 25px
+    @media (max-width: 575.98px)
+      margin:
+        bottom: 20px
+      font-size: 10px
+      line-height: 12px
     p
       margin:
         top: 0
@@ -1052,10 +1398,12 @@ body
         left: auto
         right: auto
       transition: color 0.2s ease
+      @media (max-width: 575.98px)
+        font-size: 10px
+        line-height: 12px
     &:hover, &:focus
       color: $orange
       text-decoration: none
-
   .owl-item
     height: 100%
 
