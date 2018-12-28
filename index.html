@@ -8,9 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <meta property="og:image" content="img/svg/pliers.svg">
+    <link rel="icon" href="img/svg/pliers.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/svg/pliers.svg">
+
+    <link rel="shortcut icon" href="img/svg/pliers.svg" type="image/svg">
 
     <meta name="theme-color" content="#000">
 
@@ -27,7 +29,11 @@
             <img src="img/svg/logo.svg" alt="MasterMan - быстрый и надежный ремонт" width="140" height="38">
           </a>
           <nav class="main-header__navigation">
+            <div class="main-header__humburger humburger">
+                <div class="humburger__middle"></div>
+            </div>
             <ul class="main-header__list">
+              <li class="main-header__close"></li>
               <li class="main-header__element"><a href="#">Главная</a></li>
               <li class="main-header__element"><a href="#">Услуги</a></li>
               <li class="main-header__element"><a href="#">Преимущества</a></li>
@@ -35,6 +41,7 @@
               <li class="main-header__element"><a href="#">Заявка</a></li>
               <li class="main-header__element"><a href="#">Контакты</a></li>
             </ul>
+            <div class="main-header__shadow"></div>
           </nav>
         </header>
         <h1 class="visually-hidden">MasterMan - быстрый и надежный ремонт</h1>
@@ -294,5 +301,4 @@
     </footer>
   <script src="js/script.min.js" ></script>
   </body>
-
 </html>
