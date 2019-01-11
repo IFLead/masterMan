@@ -101,7 +101,7 @@ body.no-scroll
       right: 0
       width: 350px
       height: 100vh
-      z-index: 100
+      z-index: 1000
       padding: 
         top: 40px
         left: 40px
@@ -112,15 +112,6 @@ body.no-scroll
   &__list.active
     @media (max-width: 991.98px)
       display: block
-  &__shadow.active
-    position: fixed
-    top: -80px
-    left: 0
-    bottom: 0
-    right: 0
-    height: calc(100vh + 80px)
-    background-color: rgba(0, 0, 0, 0.7)
-    cursor: pointer
   &__close
     display: none
     @media (max-width: 991.98px)
@@ -198,7 +189,17 @@ body.no-scroll
       @media (max-width: 575.98px)
         height: 2px
 
-
+.shadow.active
+  display: block
+  position: fixed
+  top: -80px
+  left: 0
+  bottom: 0
+  right: 0
+  height: calc(100vh + 80px)
+  z-index: 10
+  background-color: rgba(0, 0, 0, 0.7)
+  cursor: pointer
 
 .main-screen
   position: relative
@@ -505,6 +506,102 @@ body.no-scroll
       right: 0
       bottom: 0
       background-color: rgba(0, 0, 0, 0.7)
+    &-shadow
+      display: none
+    &-shadow.active
+      display: block
+      position: fixed
+      top: -80px
+      left: 0
+      bottom: 0
+      right: 0
+      height: calc(100vh + 80px)
+      width: 100%
+      z-index: 100
+      background-color: rgba(0, 0, 0, 0.7)
+      cursor: pointer
+    &-wrapper.active
+      display: block
+    &-wrapper
+      display: none
+      position: fixed
+      width: 937px
+      height: 492px
+      overflow: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 
+        left: auto
+        right: auto
+        top: auto
+        bottom: auto
+      z-index: 1000
+      background: #ffffff
+      border-radius: 22px
+      padding: 
+        top: 45px
+        bottom: 45px
+        left: 96px
+        right: 85px
+      @media (max-width: 991.98px)
+        width: calc(100% - 60px)
+        height: calc(100% - 60px)
+      @media (max-width: 767.98px)
+        padding: 
+          left: 40px
+          right: 40px
+      @media (max-width: 575.98px)
+        padding: 
+          left: 20px
+          right: 20px
+      ul
+        list-style: none
+        padding: 
+          left: 0
+      h3
+        width: 400px
+        text-align: center
+        margin: 
+          left: auto
+          right: auto
+          bottom: 45px
+        font-size: 23px
+        line-height: 27px
+        color: $orange
+        @media (max-width: 767.98px)
+          margin: 
+            bottom: 30px
+          font-size: 20px
+          width: 100%
+
+      li
+        position: relative
+        line-height: 20px
+        font-size: 16px
+        color: #000000
+        padding: 
+          top: 15px
+          bottom: 15px
+        &:first-child
+          &::after
+            content: ""
+            position: absolute
+            height: 1px
+            width: 100%
+            left: 0
+            top: 0
+            background-color: #707070
+        &::before
+          content: ""
+          position: absolute
+          height: 1px
+          width: 100%
+          left: 0
+          bottom: 0
+          background-color: #707070
+
     a
       position: relative
       z-index: 20

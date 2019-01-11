@@ -1,31 +1,49 @@
 $(function () {
-  var $items = $('.reviews__list .reviews__element');
-  var $humburger = $('.humburger');
-  var $menu = $('.main-header__list');
-  var $close = $('.main-header__close');
-  var $body = $('body');
-  var $shadow = $('.main-header__shadow');
+  let $items = $('.reviews__list .reviews__element');
+  let $humburger = $('.humburger');
+  let $menu = $('.main-header__list');
+  let $close = $('.main-header__close');
+  let $body = $('body');
+  let $shadow = $('.shadow');
   
   $humburger.on("click", function() {
     $menu.addClass('active');
     $close.addClass('active');
     $body.addClass('no-scroll');
     $shadow.addClass('active');
-  })
+  });
 
   $close.on("click", function() {
     $menu.removeClass('active');
     $close.removeClass('active');
     $body.removeClass('no-scroll');
     $shadow.removeClass('active');
-  })
+  });
 
   $shadow.on("click", function() {
     $menu.removeClass('active');
     $close.removeClass('active');
     $body.removeClass('no-scroll');
     $shadow.removeClass('active');
-  })
+  });
+
+  let $services = $('.services__element a');
+    $services.on("click", function(e) {
+      console.log(1);
+      e.preventDefault();
+      $body.addClass('no-scroll');
+      $wrapper = $(this.parentNode).find('.services__element-wrapper');
+      $shadowElement = $(this.parentNode).find('.services__element-shadow');
+
+      $wrapper.addClass('active');   
+      $shadowElement.addClass('active');
+
+      $shadowElement.on('click', function() {
+        $body.removeClass('no-scroll');
+        $(this).removeClass('active');
+        $wrapper.removeClass('active');
+      })
+  });
 
   $('.reviews__list').owlCarousel({
       nav: true,
@@ -50,10 +68,10 @@ $(function () {
   });
 
   function equalsHeight($items) {
-      var max = 0;
+      let max = 0;
 
       $items.each(function () {
-          var h = $(this).find('> div').outerHeight();
+          let h = $(this).find('> div').outerHeight();
 
           if (h > max) {
               max = h;
