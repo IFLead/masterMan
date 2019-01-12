@@ -29,7 +29,6 @@ $(function () {
 
   let $services = $('.services__element a');
     $services.on("click", function(e) {
-      console.log(1);
       e.preventDefault();
       $body.addClass('no-scroll');
       $wrapper = $(this.parentNode).find('.services__element-wrapper');
@@ -44,6 +43,25 @@ $(function () {
         $wrapper.removeClass('active');
       })
   });
+
+  $('.scroll-link').bind('click.smoothscroll',function (e) {
+    e.preventDefault();
+    
+    let target = this.hash,
+    $target = $(target);
+      
+    $('html, body').stop().animate({
+      'scrollTop': $target.offset().top
+      }, 500, 'swing', function () {
+        window.location.hash = target;
+      });
+    });
+
+
+    // Начать здесь
+    $('.form__select').on('change', function (e) {
+      var valueSelected = this.value;
+    });
 
   $('.reviews__list').owlCarousel({
       nav: true,
