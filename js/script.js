@@ -4,27 +4,17 @@ $(function () {
   let $menu = $('.main-header__list');
   let $close = $('.main-header__close');
   let $body = $('body');
-  let $shadow = $('.shadow');
   
   $humburger.on("click", function() {
     $menu.addClass('active');
     $close.addClass('active');
     $body.addClass('no-scroll');
-    $shadow.addClass('active');
   });
 
   $close.on("click", function() {
     $menu.removeClass('active');
     $close.removeClass('active');
     $body.removeClass('no-scroll');
-    $shadow.removeClass('active');
-  });
-
-  $shadow.on("click", function() {
-    $menu.removeClass('active');
-    $close.removeClass('active');
-    $body.removeClass('no-scroll');
-    $shadow.removeClass('active');
   });
 
   let $services = $('.services__element a');
@@ -42,6 +32,12 @@ $(function () {
         $(this).removeClass('active');
         $wrapper.removeClass('active');
       })
+  });
+
+  $('.main-header__list a').on('click', function() {
+    $menu.removeClass('active');
+    $close.removeClass('active');
+    $body.removeClass('no-scroll');
   });
 
   $('.scroll-link').bind('click.smoothscroll',function (e) {
