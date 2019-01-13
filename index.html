@@ -380,32 +380,27 @@
         <h2 class="request__title">Заявка</h2>
         <p class="request__subtitle">Оставляйте заявку и ждите звонка в течение 10 минут.</p>
         <p class="request__description">Заполните минимум 2 поля, чтобы отправить заявку: Имя и номер телефона</p>
-        <form action="POST" class="request__form form">
+        <form action="https://formspree.io/your@email.com" method="POST" class="request__form form">
           <div class="form-container">
-            <input type="text" class="form__name" name="user-name" placeholder="Имя*">
-            <input type="phone" class="form__phone" name="user-phone" placeholder="Номер телефона*">
-            <select class="form__select" name="type-of-service" id="">
-              <option value="">Тип Услуги</option>
-              <option value="">Сантехнические работы</option>
-              <option value="">Электромонтажные работы</option>
-              <option value="">Кровельные работы</option>
-              <option value="">Отделочные работы</option>
-              <option value="">Услуги плотника</option>
-              <option value="">Металлоконструкционные 
-                работы</option>
-              <option value="">Установка 
-                бытовой техники</option>
-              <option value="">Сборка/разборка/
-                ремонт мебели</option>
-              <option value="">Другие услуги</option>
+            <input type="text" class="form__name" name="Имя" required placeholder="Имя*">
+            <input type="phone" class="form__phone" name="Номер телефона" required placeholder="Номер телефона*">
+            <select class="form__services" name="Тип Услуги">
+              <option value="Тип Услуги">Тип Услуги</option>
+              <option value="Сантехнические работы">Сантехнические работы</option>
+              <option value="Электромонтажные работы">Электромонтажные работы</option>
+              <option value="Кровельные работы">Кровельные работы</option>
+              <option value="Отделочные работы">Отделочные работы</option>
+              <option value="Услуги плотника">Услуги плотника</option>
+              <option value="Металлоконструкционные работы">Металлоконструкционные работы</option>
+              <option value="Установка бытовой техники">Установка бытовой техники</option>
+              <option value="Сборка/разборка/ремонт мебели">Сборка/разборка/ремонт мебели</option>
+              <option value="Другие услуги">Другие услуги</option>
             </select>
-            <select name="service" id="">
-              <option value="">Вид услуги</option>
-              <option value="">Услуга 2</option>
-              <option value="">Услуга 3</option>
+            <select class="form__type" name="Вид услуги" id="">
+              <option value="Вид услуги">Вид услуги</option>
             </select>
-            <input type="email" class="form__email" name="user-email" placeholder="E-mail">
-            <textarea class="form__textarea" name="" id="" >Сообщение</textarea>
+            <input type="email" class="form__email" name="E-mail" placeholder="E-mail">
+            <textarea class="form__textarea" name="Сообщение">Сообщение</textarea>
           </div>
           <button class="form__button" type="submit">Отправить</button>
         </form>

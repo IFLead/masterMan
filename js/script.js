@@ -58,10 +58,62 @@ $(function () {
     });
 
 
-    // Начать здесь
-    $('.form__select').on('change', function (e) {
-      var valueSelected = this.value;
+    let selectType = $('.form__type');
+
+    let addOptions = function(select) {
+      $(selectType).empty();
+      let options = $(select);
+        for(let i = 0; i < options.length; i++) {
+          let o = new Option($(options[i]).text(), $(options[i]).text());
+          $(o).html($(options[i]).text());
+          selectType.append(o);
+        }
+    }
+
+    $('.form__services').on('change', function (e) {
+      let valueSelected = this.value;
+      switch(valueSelected) {
+        case 'Сантехнические работы': {
+          addOptions('.services__element--plumber li');
+          break;
+        }
+        case 'Электромонтажные работы': {
+          addOptions('.services__element--electric-installation li');
+          break;
+        }
+        case 'Кровельные работы': {
+          addOptions('.services__element--roofing li');
+          break;
+        }
+        case 'Отделочные работы': {
+          addOptions('.services__element--finishing-work li');
+          break;
+        }
+        case 'Услуги плотника': {
+          addOptions('.services__element--carpenter li');
+          break;
+        }
+        case 'Металлоконструкционные работы': {
+          addOptions('.services__element--metal-construction li');
+          break;
+        }
+        case 'Установка бытовой техники': {
+          addOptions('.services__element--appliances li');
+          break;
+        }
+        case 'Сборка/разборка/ремонт мебели': {
+          addOptions('.services__element--furniture li');
+          break;
+        }
+        case 'Другие услуги': {
+          addOptions('.services__element--other li');
+          break;
+        }
+
+      }
     });
+
+    
 
   $('.reviews__list').owlCarousel({
       nav: true,
