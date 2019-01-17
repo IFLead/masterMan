@@ -109,6 +109,39 @@ $(function () {
       }
     });
 
+    // ВАЛИДАЦИЯ ФОРМЫ
+
+    $('.request__form').on('submit', function(e) {
+      if(!validateForm()) {
+        e.preventDefault();
+      } 
+    });
+
+    let validateForm = function() {
+      let validity = true;
+
+      $('.error').removeClass('error');
+      let regularPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+      let $phone = $('.form__phone');
+      if(!regularPhone.test($phone.val())) {
+        $phone.addClass('error');
+        validity = false;
+      }
+
+      let regularEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+      let $email = $('.form__email');
+      if(!regularEmail.test($email.val()) && $email.val() != '') {
+        $email.addClass('error');
+        validity = false;
+      }
+
+      return validity;
+    }
+
+    
+
+    
+    
     
 
   $('.reviews__list').owlCarousel({

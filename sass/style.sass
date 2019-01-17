@@ -302,6 +302,7 @@ body.no-scroll
       line-height: 20px
       border: 0px
       text-align: center
+      text-decoration: none
       padding:
         left: 35px
         right: 35px
@@ -311,6 +312,7 @@ body.no-scroll
       cursor: pointer
       width: 260px
       &:hover, &:focus
+        text-decoration: none
         transition: all 0.2s ease
         outline: none
       @media (max-width: 767.98px)
@@ -1114,6 +1116,9 @@ body.no-scroll
           right: 20px
           top: 10px
           bottom: 10px
+    input.error
+      transition: all 0.2s ease
+      box-shadow: 0 0 0px 2px red
     select
       appearance: none;
       background-image: url("../img/svg/select-arrow.svg")

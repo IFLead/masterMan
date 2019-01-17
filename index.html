@@ -50,8 +50,8 @@
         <p class="main-screen__description">Наш проект помогает с решением бытовых проблем - если сломался кран, не работает розетка или течёт крыша в помещении. Просто вызовите необходимого мастера, который устранит поломку.</p>
         <p class="main-screen__description">Не расстраивайтесь, если не нашли нужную услугу. Готовы уделить время и помочь решить проблему индивидуально. Для этого позвоните по номеру или оставьте заявку на сайте.</p>
         <div class="main-screen__actions actions">
-          <button class="actions__button actions__button--service">Подобрать услугу</button>
-          <button class="actions__button actions__button--request">Оставить заявку</button>
+          <a class="actions__button actions__button--service scroll-link" href="#services">Подобрать услугу</a>
+          <a class="actions__button actions__button--request scroll-link" href="#request">Оставить заявку</a>
         </div>
         <div class="contacts__wrapper">
           <ul class="main-screen__contacts contacts">
@@ -336,7 +336,7 @@
               <h3>Другие услуги</h3>
               <ul class="services__element-list">
                 <li>Вывоз мусора - дог.</li>
-                <li>Ремонт токарно фрезерных станков - дог.</li>
+                <li>Консультация по ремонту токарно-фрезерных станков - дог.</li>
               </ul>
             </div>
             <div class="services__element-shadow"></div>
@@ -382,7 +382,7 @@
         <form action="https://formspree.io/Alina1530p@gmail.com" method="POST" class="request__form form">
           <div class="form-container">
             <input type="text" class="form__name" name="Имя" required placeholder="Имя*">
-            <input type="phone" class="form__phone" name="Номер телефона" required placeholder="Номер телефона*">
+            <input type="tel" class="form__phone" name="Номер телефона" required placeholder="Номер телефона*">
             <select class="form__services" name="Тип Услуги">
               <option value="Тип Услуги">Тип Услуги</option>
               <option value="Сантехнические работы">Сантехнические работы</option>
@@ -399,7 +399,7 @@
               <option value="Вид услуги">Вид услуги</option>
             </select>
             <input type="email" class="form__email" name="E-mail" placeholder="E-mail">
-            <textarea class="form__textarea" name="Сообщение">Сообщение</textarea>
+            <textarea class="form__textarea" name="Сообщение" placeholder="Сообщение"></textarea>
           </div>
           <button class="form__button" type="submit">Отправить</button>
         </form>
